@@ -565,7 +565,7 @@ namespace Blazor.Cropper
             return (resizeProp, cw, ch);
         }
 
-        private double GetI()
+        public double GetI()
         {
             double i = 0d;
             if (WiderThanContainer)
