@@ -1085,9 +1085,13 @@ namespace Blazor.Cropper
 
         private void InitStyles()
         {
+            Console.WriteLine(nameof(InitStyles) + ": Before" + nameof(InitPos) + ":" + _prevPosX + "," + _prevPosY);
             InitPos(ref _prevPosX, ref _prevPosY);
-            _prevPosX += OffsetX;
-            _prevPosY += OffsetY;
+            Console.WriteLine(nameof(InitStyles) + ": After" + nameof(InitPos) + ":" + _prevPosX + "," + _prevPosY);
+            var i = this.GetI();
+            Console.WriteLine(nameof(InitStyles) + ":" + nameof(i) + i);
+            _prevPosX += (OffsetX*i);
+            _prevPosY += (OffsetY*i);
 
             if (initCropHeight > _imgh)
             {
