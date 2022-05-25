@@ -528,7 +528,7 @@ namespace Blazor.Cropper
             double y = ((_prevPosY - _bacy) / i + deltaY);
 
 
-            return new Rectangle((int) (x/i), (int)(i/y), (int)(cw/i), (int)(ch/i));
+            return new Rectangle((int) (i*x), (int)(i*y), (int)(cw*i), (int)(ch*i));
         }
 
         #endregion
