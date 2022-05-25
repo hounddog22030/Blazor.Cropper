@@ -288,9 +288,6 @@ namespace Blazor.Cropper
         }
 
         private double prevR = 1d;
-        private double _offsetX1;
-        private double _offsetY1;
-
         protected override async Task OnParametersSetAsync()
         {
             await base.OnParametersSetAsync();
@@ -1081,21 +1078,10 @@ namespace Blazor.Cropper
         }
 
         [Parameter]
-        public double OffsetX
-        {
-            set
-            {
-                _offsetX1 = value * this.GetI();
-            }
-            get => _offsetX1;
-        }
+        public double OffsetX { set; get; }
 
         [Parameter]
-        public double OffsetY
-        {
-            set { _offsetY1 = value * this.GetI(); }
-            get => _offsetY1;
-        }
+        public double OffsetY { set; get; }
 
         private void InitStyles()
         {
